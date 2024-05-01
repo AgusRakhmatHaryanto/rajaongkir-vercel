@@ -99,3 +99,25 @@ exports.getProvinceByName = async (req, res) => {
     });
   }
 }
+
+
+exports.getProvinceById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const province = await prisma.province.findUnique({
+      where: {
+        id: Number(id),
+      },
+    });
+    res.status(200).json({
+      status: "success",
+      data: province,
+    });
+  } catch (error) {
+    console.error("Error fetching province:", error);
+    res.status(500).json({
+      status: "error",
+      message: "Failed to fetch province",
+    });
+  }
+}
