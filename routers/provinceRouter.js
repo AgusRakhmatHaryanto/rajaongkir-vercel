@@ -5,6 +5,6 @@ const router = express.Router();
 router.post('/init', ProvinceController.initAllProvince);
 router.get('/:name', ProvinceController.getProvinceByName);
 router.get('/', ProvinceController.getAllProvince);
-router.get('/:id', ProvinceController.getProvinceById);
+router.get('/byId/:id', ProvinceController.getProvinceById);
 
 module.exports = router
