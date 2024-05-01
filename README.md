@@ -9,4 +9,4 @@ example:
 https://rajaongkir-vercel.vercel.app/api/v1/province
 ## GET PROVINCE BY NAME
 example:
-https://rajaongkir-vercel.vercel.app/api/v1/province/jawa tengah
+https://rajaongkir-vercel.vercel.app/api/v1/province/jawa
