@@ -1,4 +1,4 @@
-#Get enverontment from vercel
+# Get enverontment from vercel
 POSTGRES_URL=""
 POSTGRES_PRISMA_URL=""
 POSTGRES_URL_NO_SSL=""
@@ -8,7 +8,7 @@ POSTGRES_HOST=""
 POSTGRES_PASSWORD=""
 POSTGRES_DATABASE=""
 
-#Get this enverontment from raja ongkir 
+# Get this enverontment from raja ongkir 
 ONGKIR_KEY=
 
 ## GET ALL CITY 
