@@ -1,0 +1,24 @@
+{
+	"name": "ongkir-prisma",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon server.js",
+		"dev": "nodemon server.js",
+		"prisma": "prisma migrate dev",
+		"generate": "prisma generate",
+		"seed": "prisma db seed",
+		"studio": "prisma studio"
+	},
+	"dependencies": {
+		"@prisma/client": "^5.13.0",
+		"axios": "^1.6.8",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"morgan": "^1.10.0",
+		"nodemon": "^3.1.0",
+		"prisma": "^5.13.0"
+	}
+}

@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model City {
+  id          Int      @id @default(autoincrement())
+  name        String
+  type        String
+  postal_code Int
+  province_id Int
+  province    Province @relation(fields: [province_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}
+
+model Province {
+  id         Int      @id @default(autoincrement())
+  name       String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  city       City[]
+}
